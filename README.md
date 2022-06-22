@@ -1,10 +1,10 @@
-#### Ruby on Rails Code Challenge
+#### Ruby on Rails Coding Interview
 
 Project Requirements:
 
 * Ruby version: 2.7.2
 
-#### Before the code challenge:
+#### Before the coding interview:
 
 * Clone the repository locally and install all the dependencies
 * Get familiar with the codebase 

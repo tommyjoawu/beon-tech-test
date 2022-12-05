@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :companies, only: [] do
-    resources :users, only: [:index]
-  end
+  devise_for :users, controllers: { registrations: 'users/registrations' }
 
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  root to: 'home#index'
+
+  resources :companies
   resources :tweets, only: [:index]
 
-  resources :users, param: :username, only: [:index, :show] do
-    resources :tweets, only: [:index]
+  namespace :api do
+    resources :users
+    resources :tweets
   end
-
 end

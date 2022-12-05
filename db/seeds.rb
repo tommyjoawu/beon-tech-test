@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-5.times do
-  company = Company.create(name: Faker::Company.name)
-  5.times do |index|
-    user = User.create(display_name: Faker::Name.name, email: Faker::Internet.email, username: "user_#{company.id}_#{index+1}", company_id: company.id)
-    100.times do
-      Tweet.create(body: Faker::GreekPhilosophers.quote, user_id: user.id)
-    end
+
+1500.times do
+  user = FactoryBot.create(:user)
+  3.times do
+    random_body = [Faker::GreekPhilosophers.quote , Faker::Movies::HitchhikersGuideToTheGalaxy.marvin_quote]
+    FactoryBot.create(:tweet, body: random_body.sample, user: user)
   end
 end
+

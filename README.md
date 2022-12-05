@@ -2,10 +2,11 @@
 
 Project Requirements:
 
-* Ruby version: 2.7.2
+* Ruby version: 3.1.0
+* Node version: 16.16.0
 
 #### Before the coding interview:
 
 * Clone the repository locally and install all the dependencies
-* Get familiar with the codebase 
+* Get familiar with the codebase
 * Check the database schema

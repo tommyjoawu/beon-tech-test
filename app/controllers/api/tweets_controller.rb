@@ -16,7 +16,7 @@ module Api
     end
 
     def index
-      @tweets = Tweet.limit(TWEETS_PER_PAGE).offset(offset)
+      @tweets = Tweet.order("created_at ASC").limit(TWEETS_PER_PAGE).offset(offset)
 
       render json: @tweets
     end

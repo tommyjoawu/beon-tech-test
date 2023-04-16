@@ -1,0 +1,8 @@
+Stuff done for the app to run
+=================================================
+- t.references :user, foreign_key: truer ------ Changed truer to true
+- Installed webpacker due to starting server i ran into "The asset "application.js" is not present in the asset pipeline." so i tried running "./bin/dev" which stated i didn't have sass not webpacker from the following output
+
+15:29:16 js.1   | /bin/sh: 1: webpack: not found
+
+command ran ---- rails webpacker:install
